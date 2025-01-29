@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <img id="snaps" src="img/snaps.webp" alt="snaps">
+        <img id="fanta" src="img/fanta.webp" alt="fanta">
+        <img id="cola" src="img/cola.webp" alt="cola">
+        <img id="øl" src="img/øl.webp" alt="øl">
+    </main>
+
+    <script>
+        const snaps = document.querySelector("#snaps");
+        snaps.addEventListener("click", tjek);
+
+        document.querySelector("#fanta").addEventListener("click", tjek);
+        document.querySelector("#cola").addEventListener("click", tjek);
+        document.querySelector("#øl").addEventListener("click", tjek);
+
+        function tjek() {
+            console.log(this.alt);
+            if (this.alt == "øl" || this.alt == "snaps") {
+                console.log("indeholder alkohol");
+            } else {
+                console.log("alkoholfri");
+            }
+        }
+    </script>
+</body>
+
+</html>
